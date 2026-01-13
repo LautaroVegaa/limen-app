@@ -9,13 +9,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:limen_app/main.dart';
-import 'package:limen_app/ui/onboarding/onboarding_screen.dart';
+import 'package:limen_app/ui/onboarding/screens/onboarding_flow_screen.dart';
 
 void main() {
   testWidgets('renders first onboarding screen', (WidgetTester tester) async {
     await tester.pumpWidget(const LimenApp());
 
-    expect(find.byType(OnboardingScreen), findsOneWidget);
+    expect(find.byType(OnboardingFlowScreen), findsOneWidget);
     expect(find.byIcon(Icons.arrow_forward_rounded), findsOneWidget);
     expect(find.textContaining('Your attention'), findsOneWidget);
   });
